@@ -8,11 +8,11 @@
 
 #import "Weather.h"
 
-static NSString * const locationNameKey = @"locationName";
-static NSString * const weatherMainKey = @"weatherMain";
-static NSString * const weatherDescriptionKey = @"weatherDescription";
-static NSString * const weatherIconKey = @"weatherIcon";
-static NSString * const weatherTempKey = @"weatherTemp";
+static NSString * const locationNameKey = @"name";
+static NSString * const weatherMainKey = @"main";
+static NSString * const weatherDescriptionKey = @"description";
+static NSString * const weatherIconKey = @"icon";
+static NSString * const weatherTempKey = @"temp";
 
 @implementation Weather
 

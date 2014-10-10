@@ -15,7 +15,8 @@
     static AFHTTPSessionManager *api = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        api = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/"]];
+        api = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/weather?q="]];
+        
         
         // line below means we are expecting to get JSON type of response from the URL
         api.responseSerializer = [AFJSONResponseSerializer serializer];

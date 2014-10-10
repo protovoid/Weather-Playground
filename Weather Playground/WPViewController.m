@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor yellowColor];
     self.weatherIconImageView.image = nil;
 }
 
@@ -56,6 +56,7 @@
     }];
 }
 
+/*
 - (void)setWeatherIconImageView:(UIImageView *)weatherIconImageView {
     
     
@@ -69,5 +70,6 @@
     // snow http://openweathermap.org/img/w/13d.png
     
 }
+ */
 
 @end
