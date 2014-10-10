@@ -14,7 +14,7 @@
 
 + (WeatherController *)sharedInstance;
 
-- (void)getWeatherWithName:(NSString *)name completion:(void (^)(Weather *weather))completion;
+- (void)getWeatherWithName:(NSString *)name completion:(void (^)(NSArray *weather))completion;
 
 
 

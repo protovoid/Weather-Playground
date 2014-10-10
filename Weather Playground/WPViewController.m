@@ -25,6 +25,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.weatherIconImageView.image = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,9 +44,30 @@
         
         self.locationNameLabel.text = currentWeather.locationName;
         self.weatherMainLabel.text = currentWeather.weatherMain;
-        self.weatherDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentWeather.weatherDescription];
+        self.weatherDescriptionLabel.text = currentWeather.weatherDescription;
         self.weatherTemperatureLabel.text = currentWeather.weatherTemp;
+        //self.weatherTemperatureLabel.text = [currentWeather.weatherTemp stringValue];
+        
+        
+        
+        // self.weatherIconImageView.image = ;
+    
         
     }];
+}
+
+- (void)setWeatherIconImageView:(UIImageView *)weatherIconImageView {
+    
+    
+    // sun http://openweathermap.org/img/w/01d.png
+    // partly cloudy http://openweathermap.org/img/w/02d.png
+    // cloudy http://openweathermap.org/img/w/03d.png
+    // stormy http://openweathermap.org/img/w/04d.png
+    // rainy http://openweathermap.org/img/w/09d.png
+    // scattered showers http://openweathermap.org/img/w/10d.png
+    // t-storms http://openweathermap.org/img/w/11d.png
+    // snow http://openweathermap.org/img/w/13d.png
+    
+}
 
 @end
