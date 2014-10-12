@@ -7,12 +7,13 @@
 //
 
 #import "Weather.h"
-
-static NSString * const locationNameKey = @"name";
-static NSString * const weatherMainKey = @"main";
-static NSString * const weatherDescriptionKey = @"description";
-static NSString * const weatherIconKey = @"icon";
-static NSString * const weatherTempKey = @"temp";
+#import <UIKit/UIKit.h> 
+//
+//static NSString * const locationNameKey = @"name";
+//static NSString * const weatherMainKey = @"main";
+//static NSString * const weatherDescriptionKey = @"description";
+//static NSString * const weatherIconKey = @"icon";
+//static NSString * const weatherTempKey = @"temp";
 
 @implementation Weather
 
@@ -20,13 +21,18 @@ static NSString * const weatherTempKey = @"temp";
     
     self = [super init];
     if (self) {
-        self.locationName = dictionary[locationNameKey];
-        self.weatherMain = dictionary[weatherMainKey];
-        self.weatherDescription = dictionary[weatherDescriptionKey];
-        self.weatherIcon = dictionary[weatherIconKey];
-        self.weatherTemp = dictionary[weatherTempKey];
+        self.locationName = dictionary[@"name"];
+        self.weatherMain = dictionary[@"weather"][0][@"main"];
+        self.weatherDescription = dictionary[@"weather"][0][@"description"];
+        self.weatherIcon = dictionary[@"weather"][0][@"icon"];
+        self.weatherTemp = dictionary[@"main"][@"temp"];
+        
+        
+
     }
     return self;
 }
+
+
 
 @end

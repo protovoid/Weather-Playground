@@ -21,24 +21,23 @@
 
 - (void)getWeatherWithName:(NSString *)name completion:(void (^)(NSArray *weather))completion {
     
-    NSString *path = [NSString stringWithFormat:@"name/%@", name];
+    NSString *path = [NSString stringWithFormat:@"weather?q=%@", name];
     
     [[NetworkController api] GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSArray *weatherResponse = responseObject;
+      NSDictionary *weatherResponse = responseObject;
+        
+       NSLog(@"%@", weatherResponse);
+   
         
         NSMutableArray *weatherArray = [NSMutableArray new];
-        for (NSDictionary *dictionary in weatherResponse) {
-            
-            Weather *weather = [[Weather alloc] initWithDictionary:dictionary];
-            
-            [weatherArray addObject:weather];
-            
-        }
+       [weatherArray addObject:[[Weather alloc] initWithDictionary:weatherResponse]];
+
         
         completion(weatherArray);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         completion(nil);
+        NSLog(@"fail");
     }];
     
 }

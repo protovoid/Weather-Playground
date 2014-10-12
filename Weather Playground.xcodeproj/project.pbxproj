@@ -38,12 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63C6D0F219E4D43500AB223B /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
-		63C6D0F319E4D43500AB223B /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
-		63C6D0F519E4D4F700AB223B /* WeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherController.h; sourceTree = "<group>"; };
-		63C6D0F619E4D4F700AB223B /* WeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherController.m; sourceTree = "<group>"; };
-		63C6D0F819E4D57C00AB223B /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		63C6D0F919E4D57D00AB223B /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		63C6D0F219E4D43500AB223B /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkController.h; path = ../NetworkController.h; sourceTree = "<group>"; };
+		63C6D0F319E4D43500AB223B /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkController.m; path = ../NetworkController.m; sourceTree = "<group>"; };
+		63C6D0F519E4D4F700AB223B /* WeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherController.h; path = ../WeatherController.h; sourceTree = "<group>"; };
+		63C6D0F619E4D4F700AB223B /* WeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherController.m; path = ../WeatherController.m; sourceTree = "<group>"; };
+		63C6D0F819E4D57C00AB223B /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = ../Weather.h; sourceTree = "<group>"; };
+		63C6D0F919E4D57D00AB223B /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weather.m; path = ../Weather.m; sourceTree = "<group>"; };
 		6AABA81ECA640970A04ED7E9 /* libPods-Weather Playground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather Playground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7167C6831950376400FD8F55 /* Weather Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7167C6861950376400FD8F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,12 +96,6 @@
 		7167C67A1950376400FD8F55 = {
 			isa = PBXGroup;
 			children = (
-				63C6D0F819E4D57C00AB223B /* Weather.h */,
-				63C6D0F919E4D57D00AB223B /* Weather.m */,
-				63C6D0F519E4D4F700AB223B /* WeatherController.h */,
-				63C6D0F619E4D4F700AB223B /* WeatherController.m */,
-				63C6D0F219E4D43500AB223B /* NetworkController.h */,
-				63C6D0F319E4D43500AB223B /* NetworkController.m */,
 				7167C68C1950376400FD8F55 /* Weather Playground */,
 				7167C6AB1950376400FD8F55 /* Weather PlaygroundTests */,
 				7167C6851950376400FD8F55 /* Frameworks */,
@@ -136,6 +130,12 @@
 			children = (
 				7167C6951950376400FD8F55 /* WPAppDelegate.h */,
 				7167C6961950376400FD8F55 /* WPAppDelegate.m */,
+				63C6D0F219E4D43500AB223B /* NetworkController.h */,
+				63C6D0F319E4D43500AB223B /* NetworkController.m */,
+				63C6D0F819E4D57C00AB223B /* Weather.h */,
+				63C6D0F919E4D57D00AB223B /* Weather.m */,
+				63C6D0F519E4D4F700AB223B /* WeatherController.h */,
+				63C6D0F619E4D4F700AB223B /* WeatherController.m */,
 				7167C6981950376400FD8F55 /* Main.storyboard */,
 				7167C69B1950376400FD8F55 /* WPViewController.h */,
 				7167C69C1950376400FD8F55 /* WPViewController.m */,
