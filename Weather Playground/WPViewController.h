@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WeatherController.h"
 #import "Weather.h"
+#import "UIImage+WeatherIcon.h"
 
 @interface WPViewController : UIViewController
 

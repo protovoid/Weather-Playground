@@ -24,11 +24,9 @@
         self.locationName = dictionary[@"name"];
         self.weatherMain = dictionary[@"weather"][0][@"main"];
         self.weatherDescription = dictionary[@"weather"][0][@"description"];
-        self.weatherIcon = dictionary[@"weather"][0][@"icon"];
+        self.weatherIcon = dictionary[@"weather"][0][@"id"];
         self.weatherTemp = dictionary[@"main"][@"temp"];
-        
-        
-
+        self.humidity = dictionary[@"main"][@"humidity"];
     }
     return self;
 }

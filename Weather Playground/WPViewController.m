@@ -8,6 +8,7 @@
 
 #import "WPViewController.h"
 
+
 @interface WPViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) IBOutlet UIButton *checkWeatherButton;
@@ -16,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *weatherMainLabel;
 @property (strong, nonatomic) IBOutlet UILabel *weatherDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *weatherTemperatureLabel;
+@property (strong, nonatomic) IBOutlet UILabel *humidityLabel;
 
 @property (strong, nonatomic) IBOutlet UIImageView *weatherIconImageView;
 
@@ -47,17 +49,19 @@
         
         self.locationNameLabel.text = currentWeather.locationName;
         self.weatherMainLabel.text = currentWeather.weatherMain;
-        self.weatherDescriptionLabel.text = currentWeather.weatherDescription;;
-        //self.weatherTemperatureLabel.text = currentWeather.weatherTemp;
+        self.weatherDescriptionLabel.text = currentWeather.weatherDescription;
+        self.weatherTemperatureLabel.text = [NSString stringWithFormat:@"%.0f° F", [self fahrenheitFromKelvin:currentWeather.weatherTemp]];
+        self.humidityLabel.text = [NSString stringWithFormat:@"%.0f%% humidity", [currentWeather.humidity doubleValue]];
         
-         //self.weatherTemperatureLabel.text = [currentWeather.weatherTemp stringValue];
+        self.weatherIconImageView.image = [UIImage setWeatherIcon:currentWeather.weatherIcon];
         
-        self.weatherTemperatureLabel.text = [NSString stringWithFormat:@"%.0f°", [self fahrenheitFromKelvin:currentWeather.weatherTemp]];
-        
-        // self.weatherIconImageView.image = ;
-    
+
         
     }];
+    
+    self.textField.text = @"";
+    
+    [self.textField resignFirstResponder];
 }
 
 - (double)fahrenheitFromKelvin:(NSString *)value {
@@ -69,20 +73,8 @@
     return calc;
 }
 
-/*
-- (void)setWeatherIconImageView:(UIImageView *)weatherIconImageView {
-    
-    
-    // sun http://openweathermap.org/img/w/01d.png
-    // partly cloudy http://openweathermap.org/img/w/02d.png
-    // cloudy http://openweathermap.org/img/w/03d.png
-    // stormy http://openweathermap.org/img/w/04d.png
-    // rainy http://openweathermap.org/img/w/09d.png
-    // scattered showers http://openweathermap.org/img/w/10d.png
-    // t-storms http://openweathermap.org/img/w/11d.png
-    // snow http://openweathermap.org/img/w/13d.png
-    
-}
- */
+
+
+ 
 
 @end
