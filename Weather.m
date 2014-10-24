@@ -8,12 +8,6 @@
 
 #import "Weather.h"
 #import <UIKit/UIKit.h> 
-//
-//static NSString * const locationNameKey = @"name";
-//static NSString * const weatherMainKey = @"main";
-//static NSString * const weatherDescriptionKey = @"description";
-//static NSString * const weatherIconKey = @"icon";
-//static NSString * const weatherTempKey = @"temp";
 
 @implementation Weather
 

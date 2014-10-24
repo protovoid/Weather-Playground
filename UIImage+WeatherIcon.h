@@ -11,6 +11,6 @@
 
 @interface UIImage (WeatherIcon)
 
-+ (UIImage *)setWeatherIcon:(Weather *)myWeather;
++ (UIImage *)setWeatherIcon:(NSNumber *)myWeather;
 
 @end

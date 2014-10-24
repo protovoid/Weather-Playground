@@ -52,11 +52,7 @@
         self.weatherDescriptionLabel.text = currentWeather.weatherDescription;
         self.weatherTemperatureLabel.text = [NSString stringWithFormat:@"%.0f° F", [self fahrenheitFromKelvin:currentWeather.weatherTemp]];
         self.humidityLabel.text = [NSString stringWithFormat:@"%.0f%% humidity", [currentWeather.humidity doubleValue]];
-        
         self.weatherIconImageView.image = [UIImage setWeatherIcon:currentWeather.weatherIcon];
-        
-
-        
     }];
     
     self.textField.text = @"";
